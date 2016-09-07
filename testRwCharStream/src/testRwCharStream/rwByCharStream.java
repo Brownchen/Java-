@@ -6,9 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
 
 
 public class rwByCharStream {
@@ -30,6 +28,7 @@ public class rwByCharStream {
            fis.close();
            osw.close();
            fos.close();
+           
 		   
 		   
 	} catch (FileNotFoundException e) {

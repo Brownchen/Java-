@@ -1,0 +1,15 @@
+
+0xFD Bug是keil编译器中始终存在，而又从未得到官方修复的一个BUG！！！
+
+BUG描述：
+  当C源代码中使用了汉字等非ASCII字符，而此字符的编码又恰好包含了大于或等于0xFD的字节时，这个字节将被编译器删除，从而最终程序代码的运行错误。
+
+
+BUG修复方法一：
+  用十六进制编辑软件打开c51.exe和cx51.exe(这两个文件是相同的，名字不同)，搜索80FBFD56，改为80FBFF56即可。
+    c51.exe位置： Keil安装目录/keil/c51/bin/c51.exe
+    cx51.exe位置：Keil安装目录/keil/c51/bin/cx51.exe
+
+
+BUG修复方法二：
+  拷贝本目录下的Keil_C51_0xFD_fix.exe至Keil安装目录/keil/c51/bin/下运行即可。
